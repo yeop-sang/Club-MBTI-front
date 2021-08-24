@@ -84,13 +84,10 @@ h2 {
   text-align: center;
 }
 .activity {
-  display: flex;
+  text-align: left;
   flex-direction: column;
   width: 100%;
   margin: 0;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 .shareButton {
   display: flex;

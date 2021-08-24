@@ -43,14 +43,12 @@ h3 {
   margin: 0;
 }
 p {
-  margin: 0;
-  display: flex;
-  width: 100%;
+  margin: 5% 10% 0 10%;
+  text-align: left;
 }
 ul {
-  margin: 0;
-  display: flex;
   width: 100%;
-  margin-left: 30%;
+  margin-left: 10%;
+  margin-top: 0;
 }
 </style>
