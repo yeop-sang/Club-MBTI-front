@@ -7,14 +7,17 @@
       <slot name="subname"/>
     </div>
     <div class="clubname">
-
       <slot name="clubname"/>
     </div>
     <div class="clubintro">
       <slot name="clubintro"/>
     </div>
-    <h2>동아리 주요활동</h2>
-    <div class="activity"></div>
+    <div class="ac">
+      <h2>동아리 주요활동</h2>
+    </div>
+    <div class="activity">
+      <slot name="activity"/>
+    </div>
     <FullButton text="다시 테스트" :is-bottom="true" bg_color="FDB872" @custom-fn="retestFn"/>
   </div>
 </template>
@@ -37,6 +40,16 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  width: 100%;
+  display: flex;
+  margin-left: 10%;
+}
+.ac {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 .pageDiv {
   width: 100%;
   height: 100%;
@@ -65,7 +78,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 30%;
+  margin-bottom: 30%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -74,7 +87,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 50%;
+  margin: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
