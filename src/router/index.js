@@ -15,6 +15,11 @@ const routes = [
         path: '/ynq',
         name: 'YesOrNoQuestion',
         component: () => import('@/views/YesOrNoQuestion')
+    },
+    {
+        path: '/intro',
+        name: 'Introduction',
+        component: () => import('@/views/Introduction')
     }
 ]
 
