@@ -15,19 +15,22 @@
     </div>
     <h2>동아리 주요활동</h2>
     <div class="activity"></div>
-    <div class="answer">
-      <slot name="answer"/>
-    </div>
+    <FullButton text="다시 테스트" :is-bottom="true" bg_color="FDB872" @custom-fn="retestFn"/>
   </div>
 </template>
 
 <script>
 import router from "@/router";
+import FullButton from "../components/FullButton";
 export default {
   name: "IntroTemplate",
+  components: {FullButton},
   methods:{
     async shareToPage() {
       await router.back();
+    },
+    async retestFn() {
+      await router.push('/');
     }
   }
 }
@@ -38,7 +41,7 @@ export default {
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .subname {
   display: flex;
@@ -82,13 +85,5 @@ export default {
   justify-content: flex-end;
   width: 100%;
   margin-right: 10%;
-}
-.answer {
-  width: 100%;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 </style>
