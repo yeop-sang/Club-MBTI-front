@@ -12,9 +12,21 @@ const routes = [
         component: () => import('@/views/application')
     },
     {
-        path: '/ynq',
-        name: 'YesOrNoQuestion',
-        component: () => import('@/views/YesOrNoQuestion')
+        path: '/question/class',
+        name: 'ClassQuestion',
+        component: () => import('@/views/ClassQuestion'),
+        props: true
+    },
+    {
+        path: '/question/club',
+        name: 'ClubQuestion',
+        component: () => import('@/views/ClubQuestion'),
+        props: true
+    },
+    {
+        path: '/intro',
+        name: 'intro',
+        component: () => import('@/views/Introduction')
     }
 ]
 

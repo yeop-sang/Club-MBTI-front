@@ -17,6 +17,11 @@ import router from "@/router";
 
 export default {
   name: "QuestionTemplate",
+  data() {
+    return {
+      isLoading: true
+    }
+  },
   methods: {
     async backToPage() {
       await router.back();
@@ -29,6 +34,7 @@ export default {
 .pageDiv {
   width: 100%;
   height: 100%;
+  padding-top: 30px;
   align-items: center;
   justify-content: center;
 }
@@ -37,7 +43,6 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 10%;
   justify-content: center;
   align-items: center;
   text-align: center;

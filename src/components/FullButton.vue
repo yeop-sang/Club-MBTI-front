@@ -27,7 +27,7 @@ export default {
       if (this.isBottom) {
         style = {
           position: 'absolute',
-          bottom: '5%'
+          bottom: '10%'
         };
       }
       style['background'] = "#" + this.bg_color;
@@ -54,12 +54,12 @@ export default {
   outline: 0;
 
   font-family: Montserrat;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 800;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.3;
-  letter-spacing: 0.08px;
+  line-height: 1.44;
+  letter-spacing: 0.07px;
   text-align: center;
   color: #fff;
 }
