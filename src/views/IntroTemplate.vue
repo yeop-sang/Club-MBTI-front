@@ -1,12 +1,13 @@
 <template>
   <div class="flex-column pageDiv">
     <div class="subname">
-      <slot name="subname"/>
-    </div>
-    <div class="clubname">
       <div class="shareButton">
         <img src="../assets/share_icon.svg" alt="share" @click="shareToPage"/>
       </div>
+      <slot name="subname"/>
+    </div>
+    <div class="clubname">
+
       <slot name="clubname"/>
     </div>
     <div class="clubintro">
@@ -52,7 +53,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 0%;
   justify-content: center;
   align-items: center;
   text-align: center;

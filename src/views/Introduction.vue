@@ -32,3 +32,11 @@ export default {
   }
 }
 </script>
+<style scoped>
+h1 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+</style>
