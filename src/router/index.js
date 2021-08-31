@@ -12,7 +12,7 @@ const routes = [
         component: () => import('@/views/application')
     },
     {
-        path: '/ynq',
+        path: '/question/class',
         name: 'YesOrNoQuestion',
         component: () => import('@/views/YesOrNoQuestion')
     },

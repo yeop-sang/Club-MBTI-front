@@ -32,7 +32,16 @@ export default {
       activities: ["매학기 정기공연","매방학 교내/외 동아리들과의 연합공연\n",
       "교내 최고(古)의 락밴드 동아리"]
     }
-  }
+  },
+  created() {
+
+  },
+  methods: {
+    async getClubData() {
+      const res = this.getData('/')
+      console.log(res)
+    }
+  },
 }
 </script>
 <style scoped>

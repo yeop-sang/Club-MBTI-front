@@ -1,12 +1,13 @@
 <template>
   <div class="flex-column pageDiv">
-    <div class="question">
+    <PacmanLoader v-show="loading"/>
+    <div class="question" v-show="!(loading)">
       <div class="backButton">
         <img src="../assets/back.svg" alt="back" @click="backToPage"/>
       </div>
       <slot name="question"/>
     </div>
-    <div class="answer">
+    <div class="answer" v-show="!(loading)">
       <slot name="answer"/>
     </div>
   </div>
@@ -14,13 +15,21 @@
 
 <script>
 import router from "@/router";
+import PacmanLoader from "@/components/PackmanLoader";
 
 export default {
   name: "QuestionTemplate",
+  components: {PacmanLoader},
+  props: {
+    loading: {
+      type: Boolean,
+      default: true
+    },
+  },
   methods: {
     async backToPage() {
       await router.back();
-    }
+    },
   },
 }
 </script>

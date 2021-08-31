@@ -1,5 +1,5 @@
 <template>
-  <QuestionTemplate>
+  <QuestionTemplate :loading="loading">
     <template v-slot:question>
       <h1>{{ this.question }}</h1>
     </template>
@@ -21,18 +21,39 @@ import QuestionTemplate from "@/views/QuestionTemplate";
 export default {
   name: "YesOrNoQuestion",
   components: {QuestionTemplate, RouterLinkFullButton},
+  mounted() {
+    this.getQuestion();
+  },
+  watch: {
+    $route() {
+      this.loading = true;
+      this.getQuestion()
+    }
+  },
   data() {
     return {
-      question: "Active한 활동이 좋다",
+      question: "Loading",
+      pathList: [
+        '/',
+        '/'
+      ],
+      loading: true,
     }
   },
   methods: {
     async yesFn() {
-      await router.push('/');
+      await router.push('/' + this.pathList[0]);
     },
     async noFn() {
-      await router.push('form');
+      await router.push('/' + this.pathList[1]);
     },
+    async getQuestion() {
+      const res = await this.getData("/question/class?id=" + this.$route.query['id']);
+      console.log(res);
+      this.question = res.question;
+      this.pathList = [res.data[0]['path'], res.data[1]['path']]
+      this.loading = false;
+    }
   },
 }
 </script>
