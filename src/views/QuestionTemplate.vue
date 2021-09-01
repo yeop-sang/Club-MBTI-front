@@ -1,32 +1,35 @@
 <template>
-  <div class="flex-column pageDiv">
-    <PacmanLoader v-show="loading"/>
-    <div class="question" v-show="!(loading)">
-      <div class="bar">
-        <div class="backButton">
-          <img src="../assets/back.svg" alt="back" @click="backToPage"/>
+  <LoadingTemplate :is_loading="is_loading">
+    <template v-slot:default>
+      <div class="flex-column pageDiv">
+        <div class="question">
+          <div class="bar">
+            <div class="backButton">
+              <img src="../assets/back.svg" alt="back" @click="backToPage"/>
+            </div>
+            <div class="DongBTI">DongBTI</div>
+          </div>
+          <div style="margin: 0 35px">
+            <slot name="question"/>
+          </div>
         </div>
-        <div class="DongBTI">DongBTI</div>
+        <div class="answer">
+          <slot name="answer"/>
+        </div>
       </div>
-      <div style="margin: 0 35px">
-        <slot name="question"/>
-      </div>
-    </div>
-    <div class="answer" v-show="!(loading)">
-      <slot name="answer"/>
-    </div>
-  </div>
+    </template>
+  </LoadingTemplate>
 </template>
 
 <script>
 import router from "@/router";
-import PacmanLoader from "@/components/PackmanLoader";
+import LoadingTemplate from "@/views/LoadingTemplate";
 
 export default {
   name: "QuestionTemplate",
-  components: {PacmanLoader},
+  components: {LoadingTemplate},
   props: {
-    loading: {
+    is_loading: {
       type: Boolean,
       default: true
     },
@@ -43,8 +46,8 @@ export default {
 .pageDiv {
   width: 100%;
   height: 100%;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .question {

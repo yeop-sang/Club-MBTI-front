@@ -17,9 +17,19 @@ const routes = [
         component: () => import('@/views/YesOrNoQuestion')
     },
     {
-        path: '/intro',
-        name: 'Introduction',
+        path: '/result/club',
+        name: 'ResultClub',
         component: () => import('@/views/Introduction')
+    },
+    {
+        path: '/result/class',
+        name: 'ResultClass',
+        component: () => import('@/views/ClassResult')
+    },
+    {
+        path: '/question/club',
+        name: 'QuestionClub',
+        component: () => import('@/views/ClubQuestion')
     }
 ]
 

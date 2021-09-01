@@ -1,5 +1,5 @@
 <template>
-  <QuestionTemplate :loading="loading">
+  <QuestionTemplate :is_loading="loading">
     <template v-slot:question>
       <h2>{{ this.question }}</h2>
     </template>
@@ -7,7 +7,6 @@
       <RouterLinkFullButton text="Yes" @custom-fn="yesFn"/>
       <RouterLinkFullButton
           text="No"
-          bg_color="FDB872"
           @custom-fn="noFn"
       />
     </template>

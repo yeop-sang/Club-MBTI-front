@@ -21,7 +21,7 @@
 import IntroTemplate from "@/views/IntroTemplate";
 
 export default {
-  name: "Introduction",
+  name: "ResultClub",
   components: {IntroTemplate},
   data() {
     return {
@@ -54,6 +54,7 @@ h3 {
 p {
   margin: 5% 10% 0 10%;
   text-align: left;
+
 }
 ul {
   width: 100%;
