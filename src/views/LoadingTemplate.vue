@@ -1,7 +1,7 @@
 <template>
-  <div class="flex-column pageDiv">
+  <div class="flex-column contentDiv">
     <PacmanLoader v-show="is_loading"/>
-    <div class="pageDiv" v-show="!(is_loading)">
+    <div class="contentDiv" v-show="!(is_loading)">
       <slot/>
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-.pageDiv {
+.contentDiv {
   width: 100%;
   height: 100%;
   justify-content: flex-start;

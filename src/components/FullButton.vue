@@ -48,8 +48,6 @@ export default {
   border: 0;
   outline: 0;
 
-  z-index: 100;
-
   font-family: 'NanumDdarEGeEomMaGa';
   font-size: 30px;
   letter-spacing: 0.12px;

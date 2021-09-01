@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-column pageDiv">
+  <div class="flex-column contentDiv">
     <div class="subTitle">
       <div class="shareButton">
         <img src="../assets/share_icon.svg" alt="share" @click="shareToPage"/>
@@ -50,7 +50,7 @@ h2 {
   flex-direction: row;
   width: 100%;
 }
-.pageDiv {
+.contentDiv {
   width: 100%;
   height: 100%;
   align-items: center;

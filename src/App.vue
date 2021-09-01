@@ -14,6 +14,8 @@ export default {
 <style>
 @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
 @import url(https://static-clova.pstatic.net/static/public/font_event/css_210628/30/30.css);
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.1/dimibang_new.woff') format('woff');
+
 #app {
   font-family: 'Jeju Myeongjo', serif;
   -webkit-font-smoothing: antialiased;

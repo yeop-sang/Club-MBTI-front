@@ -1,22 +1,26 @@
 <template>
   <LoadingTemplate :is_loading="false">
-    <div class="flex-column pageDiv">
-      <div class="subTitle">
-        <div class="shareButton">
-          <img src="../assets/share_icon.svg" alt="share" @click="shareToPage"/>
+    <div class="pageDiv">
+      <div class="flex-column contentDiv">
+        <div class="subTitle">
+          <div class="shareButton">
+            <img src="../assets/share_icon.svg" alt="share" @click="shareToPage"/>
+          </div>
+          <slot name="subTitle"/>
         </div>
-        <slot name="subTitle"/>
+        <div class="resultTitle">
+          <slot name="resultTitle"/>
+        </div>
+        <div class="classImage">
+          <slot name="classImage"/>
+        </div>
+        <div>
+          <slot name="explain"/>
+        </div>
       </div>
-      <div class="resultTitle">
-        <slot name="resultTitle"/>
+      <div class="bottomButton">
+        <FullButton :text="button_text"/>
       </div>
-      <div class="classImage">
-        <slot name="classImage"/>
-      </div>
-      <div>
-        <slot name="explain"/>
-      </div>
-      <FullButton :is-bottom="true" :text="button_text"/>
     </div>
   </LoadingTemplate>
 </template>
@@ -54,6 +58,12 @@ export default {
 .pageDiv {
   width: 100%;
   height: 100%;
+  align-items: space-between;
+}
+
+
+.contentDiv {
+  width: 100%;
   align-items: center;
   justify-content: flex-start;
 }
@@ -62,7 +72,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 15%;
+  margin-top: 10%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -96,4 +106,7 @@ export default {
   margin-right: 10%;
 }
 
+.bottomButton {
+  margin-top: 20%;
+}
 </style>

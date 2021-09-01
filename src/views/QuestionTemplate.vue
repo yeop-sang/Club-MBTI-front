@@ -1,7 +1,7 @@
 <template>
   <LoadingTemplate :is_loading="is_loading">
     <template v-slot:default>
-      <div class="flex-column pageDiv">
+      <div class="flex-column contentDiv">
         <div class="question">
           <div class="bar">
             <div class="backButton">
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style scoped>
-.pageDiv {
+.contentDiv {
   width: 100%;
   height: 100%;
   justify-content: center;
