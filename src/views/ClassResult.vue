@@ -104,10 +104,12 @@ p {
 
 .stamp {
   color: #666666;
+
   border: 1rem double #C4C4C4;
   transform: rotate(-5deg);
   font-size: 50px;
-  font-family: url(../assets/dimibang.ttf) format("truetype");
+  font-family: dimibang;
+  -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
   border-radius: 0;
   padding: 0.5rem;
   margin-top: 30px;

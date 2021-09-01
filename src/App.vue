@@ -13,6 +13,12 @@ export default {
 @import url(https://static-clova.pstatic.net/static/public/font_event/css_210628/30/30.css);
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
+@font-face {
+  font-family: dimibang;
+  src: local('dimibang'),
+    url("./assets/dimibang.ttf") format("truetype");
+}
+
 #app {
   font-family: 'Jeju Myeongjo', serif;
   -webkit-font-smoothing: antialiased;
