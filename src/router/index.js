@@ -19,7 +19,7 @@ const routes = [
     {
         path: '/result/club',
         name: 'ResultClub',
-        component: () => import('@/views/Introduction')
+        component: () => import('@/views/ClubResult')
     },
     {
         path: '/result/class',

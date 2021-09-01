@@ -1,6 +1,8 @@
 <template>
-  <div class="flex-column contentDiv">
+  <div class="loader">
     <PacmanLoader v-show="is_loading"/>
+  </div>
+  <div class="flex-column contentDiv">
     <div class="contentDiv" v-show="!(is_loading)">
       <slot/>
     </div>
