@@ -12,10 +12,6 @@ export default {
       type: String,
       default: "ERROR"
     },
-    bg_color: {
-      type: String,
-      default: "7FBD95"
-    },
     isBottom: {
       type: Boolean,
       default: false
@@ -30,7 +26,6 @@ export default {
           bottom: '10%'
         };
       }
-      style['background'] = "#" + this.bg_color;
       return style;
     },
   },
@@ -43,25 +38,21 @@ export default {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .mybutton {
   width: 85%;
   max-width: 318px;
   height: 52px;
   border-radius: 52px;
-  background-color: v-bind(bg_color);
+  background-color: rgba(179, 169, 161, 0.3);
   border: 0;
   outline: 0;
 
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 800;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: 0.07px;
+  font-family: 'NanumDdarEGeEomMaGa';
+  font-size: 30px;
+  letter-spacing: 0.12px;
   text-align: center;
-  color: #fff;
+  color: #582908;
 }
 
 

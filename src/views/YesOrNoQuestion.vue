@@ -1,7 +1,7 @@
 <template>
   <QuestionTemplate :loading="loading">
     <template v-slot:question>
-      <h1>{{ this.question }}</h1>
+      <h2>{{ this.question }}</h2>
     </template>
     <template v-slot:answer>
       <RouterLinkFullButton text="Yes" @custom-fn="yesFn"/>

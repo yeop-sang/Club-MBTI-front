@@ -1,6 +1,6 @@
 <template>
     <div class="loader" v-show="isLoading">
-      <pacman-loader color="#7FBD95"/>
+      <pacman-loader :color="#666666"/>
     </div>
 </template>
 

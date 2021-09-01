@@ -2,10 +2,15 @@
   <div class="flex-column pageDiv">
     <PacmanLoader v-show="loading"/>
     <div class="question" v-show="!(loading)">
-      <div class="backButton">
-        <img src="../assets/back.svg" alt="back" @click="backToPage"/>
+      <div class="bar">
+        <div class="backButton">
+          <img src="../assets/back.svg" alt="back" @click="backToPage"/>
+        </div>
+        <div class="DongBTI">DongBTI</div>
       </div>
-      <slot name="question"/>
+      <div style="margin: 0 35px">
+        <slot name="question"/>
+      </div>
     </div>
     <div class="answer" v-show="!(loading)">
       <slot name="answer"/>
@@ -61,15 +66,30 @@ export default {
   align-items: center;
 }
 
-.backButton {
+.bar {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   width: 100%;
-  margin-left: 10%;
 }
 
-h {
-  margin-top: 0px;
+.backButton {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.DongBTI {
+  width: 62px;
+  height: 35px;
+  font-family: 'NanumDdarEGeEomMaGa';
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.87;
+  letter-spacing: 0.12px;
+  text-align: center;
+  color: #582908;
+  margin: 0 auto;
 }
 </style>
