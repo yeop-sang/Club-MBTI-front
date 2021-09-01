@@ -30,6 +30,11 @@ const routes = [
         path: '/question/club',
         name: 'QuestionClub',
         component: () => import('@/views/ClubQuestion')
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => {router.push('/')}
     }
 ]
 
