@@ -1,4 +1,5 @@
 <template>
+  <div @click="handleClick" style="width: 100%; height: 100%">
   <ClassResultTemplate button_text="동아리 추천 받기" :is_loading="is_loading" :is_show_button="!(share_mode)"
   :next_path="next_question_path">
     <template v-slot:subTitle>
@@ -28,6 +29,7 @@
       </div>
     </template>
   </ClassResultTemplate>
+  </div>
 </template>
 <script>
 import ClassResultTemplate from "@/views/ResultTemplate";
@@ -45,13 +47,13 @@ export default {
       class_intro: [],
       is_loading: true,
       share_mode: false,
-      next_question_path: "/"
+      next_question_path: "/",
+      is_clicked: false
     }
   },
   methods: {
     async getClass() {
       const res = await this.getData('/result/class?id=' + this.$route.query['id'])
-      console.log(res);
       this.class_name = res['classname'];
       this.sub_name = res['ClassSubTitle'];
       this.class_intro = res['ClassExplain'];
@@ -60,6 +62,16 @@ export default {
     },
     shareToPage() {
       this.share_mode = true
+    },
+    handleClick() {
+      if(this.share_mode)
+        if (this.is_clicked)
+        {
+          this.share_mode = false
+          this.is_clicked = false
+        }
+        else
+          this.is_clicked = true
     }
   },
 }

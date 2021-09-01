@@ -42,15 +42,12 @@ export default {
   },
   methods: {
     async getQuestion() {
-      console.log("getQuestion")
       const res = await this.getData("/question/club?id=" + this.$route.query['id']);
-      console.log(res);
       this.question = res.question;
       this.data = res.answer;
       this.is_loading = false;
     },
     async pushNextQuestion(path) {
-      console.log(path);
       router.push("/" + path);
     },
   },

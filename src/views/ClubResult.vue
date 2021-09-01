@@ -38,7 +38,6 @@ export default {
     async getClubData() {
       const request_path = '/result/club?id=' + this.$route.query['id']
       const club_explain_res = await this.getData(request_path);
-      console.log(club_explain_res);
       this.club_name = club_explain_res['club_name'];
       this.club_explain = club_explain_res['club_explain'];
       this.activities = club_explain_res['activities'];
