@@ -22,7 +22,7 @@ export default {
       let style = {};
       if (this.isBottom) {
         style = {
-          position: 'absolute',
+          position: 'fixed',
           bottom: '10%'
         };
       }
@@ -47,6 +47,7 @@ export default {
   background-color: rgba(179, 169, 161, 0.3);
   border: 0;
   outline: 0;
+  //margin-bottom: 10%;
 
   font-family: 'NanumDdarEGeEomMaGa';
   font-size: 30px;

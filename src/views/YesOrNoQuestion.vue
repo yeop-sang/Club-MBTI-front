@@ -48,7 +48,6 @@ export default {
     },
     async getQuestion() {
       const res = await this.getData("/question/class?id=" + this.$route.query['id']);
-      console.log(res);
       this.question = res.question;
       this.pathList = [res.data[0]['path'], res.data[1]['path']]
       this.loading = false;

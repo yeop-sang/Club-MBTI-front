@@ -1,37 +1,36 @@
 <template>
-  <LoadingTemplate :is_loading="false">
-    <div class="pageDiv">
+  <LoadingTemplate :is_loading="is_loading">
+    <div class="flex-column pageDiv">
       <div class="flex-column contentDiv">
-        <div class="subTitle">
-          <div class="shareButton">
-            <img src="../assets/share_icon.svg" alt="share" @click="shareToPage"/>
+        <div class="resultWrapper">
+          <div class="subTitle">
+            <slot name="subTitle"/>
           </div>
-          <slot name="subTitle"/>
+          <div class="resultTitle">
+            <slot name="resultTitle"/>
+          </div>
         </div>
-        <div class="resultTitle">
-          <slot name="resultTitle"/>
-        </div>
-        <div class="classImage">
-          <slot name="classImage"/>
-        </div>
-        <div>
+        <div class="explainWrapper">
           <slot name="explain"/>
         </div>
+        <slot name="box"/>
+        <div></div>
       </div>
-      <div class="bottomButton">
-        <FullButton :text="button_text"/>
+      <div style="margin-bottom: 10%">
+        <FullButton :text="button_text" @custom-fn="goTo" v-show="is_show_button"/>
       </div>
     </div>
   </LoadingTemplate>
 </template>
 
 <script>
-import FullButton from "@/components/FullButton";
 import LoadingTemplate from "@/views/LoadingTemplate";
+import FullButton from "@/components/FullButton";
+import router from "@/router";
 
 export default {
   name: "ClassResult",
-  components: {LoadingTemplate, FullButton},
+  components: {FullButton, LoadingTemplate},
   data() {
     return {
       share: false
@@ -40,17 +39,28 @@ export default {
   methods: {
     shareToPage() {
       this.share = true
+    },
+    goTo() {
+      router.push(this.next_path);
     }
   },
   props: {
-    stamp_title: {
-      type: String,
-      default: "Error"
-    },
     button_text: {
       type: String,
-      default: "Error"
+      default: "Loading",
     },
+    next_path: {
+      type: String,
+      default: '/'
+    },
+    is_loading: {
+      type: Boolean,
+      default: true,
+    },
+    is_show_button: {
+      type: Boolean,
+      default: true,
+    }
   },
 }
 </script>
@@ -58,21 +68,20 @@ export default {
 .pageDiv {
   width: 100%;
   height: 100%;
-  align-items: space-between;
+  justify-content: space-between;
 }
-
 
 .contentDiv {
   width: 100%;
+  height: 100%;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 .subTitle {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 10%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -82,31 +91,21 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 0%;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.classImage {
+.resultWrapper {
+  width: 100%;
+}
+
+.explainWrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 20%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
-.shareButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-  margin-right: 10%;
-}
 
-.bottomButton {
-  margin-top: 20%;
-}
 </style>
