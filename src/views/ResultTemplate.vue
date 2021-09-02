@@ -16,7 +16,7 @@
         <slot name="box"/>
         <div></div>
       </div>
-      <div>
+      <div style="margin-bottom: 10%">
         <FullButton :text="button_text" @custom-fn="goTo" v-show="is_show_button"/>
       </div>
     </div>

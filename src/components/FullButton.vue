@@ -47,7 +47,7 @@ export default {
   background-color: rgba(179, 169, 161, 0.3);
   border: 0;
   outline: 0;
-  margin: 10% 0;
+  //margin-bottom: 10%;
 
   font-family: 'NanumDdarEGeEomMaGa';
   font-size: 30px;
