@@ -58,6 +58,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  line-height: 2rem;
 }
 
 .answer {

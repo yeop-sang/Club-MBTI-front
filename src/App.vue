@@ -19,8 +19,14 @@ export default {
     url("./assets/dimibang.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Noto Sans";
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2');
+  unicode-range: U+4E00-9FFF;
+}
+
 #app {
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Jeju Myeongjo', "Noto Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
