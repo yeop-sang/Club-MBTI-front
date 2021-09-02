@@ -64,6 +64,7 @@ p {
   letter-spacing: 0.8px;
 }
 .stamp {
+  margin: 5%;
   color: #666666;
   border: 1rem double #C4C4C4;
   transform: rotate(-5deg);
