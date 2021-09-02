@@ -103,7 +103,7 @@ p {
 }
 
 .stamp {
-  margin: 5%;
+  margin-bottom: 10%;
   color: #666666;
 
   border: 1rem double #C4C4C4;
