@@ -88,7 +88,6 @@ h3 {
 p {
   margin: 2px 10%;
   text-align: left;
-  line-height: 1.5rem;
   letter-spacing: 0.8px;
 }
 

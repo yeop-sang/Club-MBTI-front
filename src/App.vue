@@ -15,8 +15,9 @@ export default {
 
 @font-face {
   font-family: dimibang;
-  src: local('dimibang'),
-    url("./assets/dimibang.ttf") format("truetype");
+  src: url("./assets/dimibang.ttf") format("truetype"),
+  url("./assets/dimibang.eot?#iefix") format('embedded-opentype'),
+  url('./assets/dimibang.woff') format('woff');
 }
 
 @font-face {
@@ -26,10 +27,11 @@ export default {
 }
 
 #app {
-  font-family: 'Jeju Myeongjo', "Noto Sans";
+  font-family: "NanumDdarEGeEomMaGa", "Noto Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  font-size: 23px;
   color: #582908;
   display: flex;
   flex-direction: column;
@@ -60,6 +62,9 @@ html, body {
   margin: 0px;
 }
 
+p {
+  line-height: 1.7rem;
+}
 </style>
 <style scoped>
 .main {

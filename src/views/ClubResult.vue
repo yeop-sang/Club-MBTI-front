@@ -60,7 +60,6 @@ h3 {
 p {
   margin: 5% 10% 0 10%;
   text-align: left;
-  line-height: 1.3rem;
   letter-spacing: 0.8px;
 }
 
