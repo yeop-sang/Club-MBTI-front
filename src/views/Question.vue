@@ -5,7 +5,7 @@
     </template>
     <template v-slot:answer>
       <FullButton v-for="(question, i) in this.data" :key="i"
-                  :text="question.answer_club" @custom-fn="pushNextQuestion(question.path_club)"
+                  :text="question.answer" @custom-fn="pushNextQuestion(question.path)"
       />
     </template>
   </QuestionTemplate>
@@ -17,7 +17,7 @@ import FullButton from "@/components/FullButton";
 import router from "@/router";
 
 export default {
-  name: "ClubQuestion.vue",
+  name: "Question",
   components: {FullButton, QuestionTemplate},
   mounted() {
     this.getQuestion()
@@ -42,9 +42,10 @@ export default {
   },
   methods: {
     async getQuestion() {
-      const res = await this.getData("/question/club?id=" + this.$route.query['id']);
+      const res = await this.getData(this.$route.href);
+      console.log(res);
       this.question = res.question;
-      this.data = res.answer;
+      this.data = res.data;
       this.is_loading = false;
     },
     async pushNextQuestion(path) {

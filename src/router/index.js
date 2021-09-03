@@ -13,8 +13,8 @@ const routes = [
     },
     {
         path: '/question/class',
-        name: 'YesOrNoQuestion',
-        component: () => import('@/views/YesOrNoQuestion')
+        name: 'QuestionClass',
+        component: () => import('@/views/Question')
     },
     {
         path: '/result/club',
@@ -29,7 +29,7 @@ const routes = [
     {
         path: '/question/club',
         name: 'QuestionClub',
-        component: () => import('@/views/ClubQuestion')
+        component: () => import('@/views/Question')
     },
     {
         path: '/:pathMatch(.*)*',
