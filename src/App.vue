@@ -10,7 +10,7 @@ export default {
 </script>
 <style>
 @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-@import url(https://static-clova.pstatic.net/static/public/font_event/css_210628/30/30.css);
+@import url(https://static-clova.pstatic.net/static/public/font_event/css_211102/30/30.css);
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
 @font-face {
